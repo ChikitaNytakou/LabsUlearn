@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AngryBirds")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66096c10380c5dc65326927ea3a7d7f01ce6047d")]
 [assembly: System.Reflection.AssemblyProductAttribute("AngryBirds")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AngryBirds")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

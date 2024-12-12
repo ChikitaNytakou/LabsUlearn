@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Life_2.0\\Ulearn\\AngryBirds\\AngryBirds.csproj": {}
+    "D:\\Life_2.0\\Ulearn\\LabsUlearn\\Errors\\AngryBirds\\AngryBirds.csproj": {}
   },
   "projects": {
-    "D:\\Life_2.0\\Ulearn\\AngryBirds\\AngryBirds.csproj": {
+    "D:\\Life_2.0\\Ulearn\\LabsUlearn\\Errors\\AngryBirds\\AngryBirds.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Life_2.0\\Ulearn\\AngryBirds\\AngryBirds.csproj",
+        "projectUniqueName": "D:\\Life_2.0\\Ulearn\\LabsUlearn\\Errors\\AngryBirds\\AngryBirds.csproj",
         "projectName": "AngryBirds",
-        "projectPath": "D:\\Life_2.0\\Ulearn\\AngryBirds\\AngryBirds.csproj",
+        "projectPath": "D:\\Life_2.0\\Ulearn\\LabsUlearn\\Errors\\AngryBirds\\AngryBirds.csproj",
         "packagesPath": "C:\\Users\\Nikita\\.nuget\\packages\\",
-        "outputPath": "D:\\Life_2.0\\Ulearn\\AngryBirds\\obj\\",
+        "outputPath": "D:\\Life_2.0\\Ulearn\\LabsUlearn\\Errors\\AngryBirds\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\Program Files (x86)_Microsoft Visual Studio_Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d3U751PqKVk=",
+  "dgSpecHash": "X6Sdb1Gcb/g=",
   "success": true,
-  "projectFilePath": "D:\\Life_2.0\\Ulearn\\AngryBirds\\AngryBirds.csproj",
+  "projectFilePath": "D:\\Life_2.0\\Ulearn\\LabsUlearn\\Errors\\AngryBirds\\AngryBirds.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nikita\\.nuget\\packages\\avalonia\\0.10.13\\avalonia.0.10.13.nupkg.sha512",
     "C:\\Users\\Nikita\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.0.2020091801\\avalonia.angle.windows.natives.2.1.0.2020091801.nupkg.sha512",
