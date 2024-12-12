@@ -1,0 +1,15 @@
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\bin\Debug\net8.0\Percentage.exe
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\bin\Debug\net8.0\Percentage.deps.json
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\bin\Debug\net8.0\Percentage.runtimeconfig.json
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\bin\Debug\net8.0\Percentage.dll
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\bin\Debug\net8.0\Percentage.pdb
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\obj\Debug\net8.0\Percentage.GeneratedMSBuildEditorConfig.editorconfig
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\obj\Debug\net8.0\Percentage.AssemblyInfoInputs.cache
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\obj\Debug\net8.0\Percentage.AssemblyInfo.cs
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\obj\Debug\net8.0\Percentage.csproj.CoreCompileInputs.cache
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\obj\Debug\net8.0\Percentage.sourcelink.json
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\obj\Debug\net8.0\Percentage.dll
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\obj\Debug\net8.0\refint\Percentage.dll
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\obj\Debug\net8.0\Percentage.pdb
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\obj\Debug\net8.0\Percentage.genruntimeconfig.cache
+D:\Life_2.0\Ulearn\LabsUlearn\Errors\Percentage\Percentage\Percentage\obj\Debug\net8.0\ref\Percentage.dll
