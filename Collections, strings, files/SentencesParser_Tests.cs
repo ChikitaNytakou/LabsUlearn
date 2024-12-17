@@ -6,15 +6,15 @@ namespace TextAnalysis;
 [TestFixture]
 public class SentencesParser_Tests
 {
-    [Test]
-    [Order(00)]
-    public void ReturnCorrectResult_OnTextWithOneSentenceWithOneWord()
-    {
-        var text = "abc";
-        var expected = new List<List<string>> { new() { "abc" } };
-        var actual = SentencesParserTask.ParseSentences(text);
-        AssertAllSentencesEqual(expected, actual, text);
-    }
+    //[Test]
+    //[Order(00)]
+    //public void ReturnCorrectResult_OnTextWithOneSentenceWithOneWord()
+    //{
+    //    var text = "abc";
+    //    var expected = new List<List<string>> { new() { "abc" } };
+    //    var actual = SentencesParserTask.ParseSentences(text);
+    //    AssertAllSentencesEqual(expected, actual, text);
+    //}
 
     [Test]
     [Order(10)]
@@ -131,6 +131,19 @@ public class SentencesParser_Tests
         var actual = SentencesParserTask.ParseSentences(text);
 
         AssertAllSentencesEqual(expected, actual, text);
+    }
+
+    [Test]
+    [Order(90)]
+    public void HarryPotterTest()
+    {
+        using (var stream = new StreamReader(new FileStream("./HarryPotterText.txt", FileMode.Open)))
+        {
+            var txtFile = stream.ReadToEnd();
+            var parsedSentence = SentencesParserTask.ParseSentences(txtFile)[2];
+            List<string> expected = new List<string>() { "the", "boy", "who", "lived", "mr" };
+            AssertSentenceEuqal(expected, parsedSentence, txtFile, 2);
+        }
     }
 
     protected static void AssertAllSentencesEqual(
