@@ -1,4 +1,6 @@
-﻿namespace TextAnalysis;
+﻿using static System.Net.Mime.MediaTypeNames;
+
+namespace TextAnalysis;
 
 static class FrequencyAnalysisTask
 {

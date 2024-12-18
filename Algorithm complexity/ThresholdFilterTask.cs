@@ -1,4 +1,8 @@
-﻿namespace Recognizer;
+﻿using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+
+namespace Recognizer;
 
 public static class ThresholdFilterTask
 {
