@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35424.110
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryPainting", "GeometryPainting.csproj", "{767FA5C6-DEB0-4518-A9A4-4F4E214C2AA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry", "..\Geometry\Geometry.csproj", "{54B17864-5A41-4EC5-AC62-744B8B00534D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{767FA5C6-DEB0-4518-A9A4-4F4E214C2AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{767FA5C6-DEB0-4518-A9A4-4F4E214C2AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{767FA5C6-DEB0-4518-A9A4-4F4E214C2AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{767FA5C6-DEB0-4518-A9A4-4F4E214C2AA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54B17864-5A41-4EC5-AC62-744B8B00534D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B17864-5A41-4EC5-AC62-744B8B00534D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B17864-5A41-4EC5-AC62-744B8B00534D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B17864-5A41-4EC5-AC62-744B8B00534D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
