@@ -1,4 +1,7 @@
-﻿namespace Geometry
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Numerics;
+
+namespace Geometry
 {
     public class Vector
     {
@@ -19,6 +22,20 @@
             vectorSum.X = vector1.X + vector2.X;
             vectorSum.Y = vector1.Y + vector2.Y;
             return vectorSum;
+        }
+
+        public static double GetLength(Segment segment)
+        {
+            return Math.Sqrt(Math.Pow(segment.End.X - segment.Begin.X, 2)
+                            + Math.Pow(segment.End.Y - segment.Begin.Y, 2));
+        }
+        public static bool IsVectorInSegment(Vector vector, Segment segment)
+        {
+            double dist1 = Math.Sqrt(Math.Pow(segment.Begin.X - vector.X, 2)
+                            + Math.Pow(segment.Begin.Y - vector.Y, 2));
+            double dist2 = Math.Sqrt(Math.Pow(segment.End.X - vector.X, 2)
+                + Math.Pow(segment.End.Y - vector.Y, 2));
+            return dist1 + dist2 == GetLength(segment);    
         }
     }
 }
