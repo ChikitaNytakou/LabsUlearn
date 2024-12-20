@@ -7,6 +7,21 @@ namespace Geometry
     {
         public double X;
         public double Y;
+
+        public double GetLength()
+        {
+            return Geometry.GetLength(this);
+        }
+
+        public Vector Add(Vector vector2)
+        {
+            return Geometry.Add(this, vector2);
+        }
+
+        public bool Belongs(Segment segment)
+        {
+            return Geometry.IsVectorInSegment(this, segment);
+        }
     }
 
     public class Geometry
