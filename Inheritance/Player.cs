@@ -17,16 +17,24 @@ namespace Digger
             switch (Game.KeyPressed)
             {
                 case Key.Up:
-                    if (y > 0) command.DeltaY -= 1;
+                    if (y > 0)
+                        if (Game.Map[x, y - 1] is not Sack)
+                            command.DeltaY--;
                     break;
                 case Key.Down:
-                    if (y < Game.MapHeight - 1) command.DeltaY += 1;
+                    if (y < Game.MapHeight - 1)
+                        if (Game.Map[x, y + 1] is not Sack) 
+                            command.DeltaY++;
                     break;
                 case Key.Right:
-                    if (x < Game.MapWidth - 1) command.DeltaX += 1;
+                    if (x < Game.MapWidth - 1)
+                        if (Game.Map[x + 1, y] is not Sack) 
+                            command.DeltaX++;
                     break;
                 case Key.Left:
-                    if (x > 0) command.DeltaX -= 1;
+                    if (x > 0)
+                        if (Game.Map[x - 1, y] is not Sack) 
+                            command.DeltaX--;
                     break;
                 default:
                     command.DeltaX = 0;
@@ -38,10 +46,13 @@ namespace Digger
 
         public bool DeadInConflict(ICreature conflictedObject)
         {
-            //string nextObject = conflictedObject.ToString();
-            //if (nextObject == "Digger.Terrain") return false;
-            //else 
-            return false;
+            if (conflictedObject is Sack || conflictedObject is Monster)
+            {
+                Game.IsOver = true;
+                return true;
+            }
+            else
+                return false;
         }
 
         public int GetDrawingPriority()

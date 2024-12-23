@@ -11,12 +11,14 @@ namespace Digger
     {
         public CreatureCommand Act(int x, int y)
         {
-            return new CreatureCommand() { DeltaX = x, DeltaY = y };
+            return new CreatureCommand();
         }
 
         public bool DeadInConflict(ICreature conflictedObject)
         {
-            return false;
+            if (conflictedObject is Player)
+                Game.Scores += 10;
+            return true;
         }
 
         public int GetDrawingPriority()

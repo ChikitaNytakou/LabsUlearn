@@ -11,7 +11,7 @@ namespace Digger
     {
         public CreatureCommand Act(int x, int y)
         {
-            return new CreatureCommand() { DeltaX = 0, DeltaY = 0 };
+            return new CreatureCommand();
         }
 
         public bool DeadInConflict(ICreature conflictedObject)
