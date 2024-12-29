@@ -1,19 +1,19 @@
 ﻿namespace GenericQueue
 {
-    class QueueItem
+    class QueueItem<TValue>
     {
-        public int Value { get; set; }
-        public QueueItem Next { get; set; }
+        public TValue Value { get; set; }
+        public QueueItem<TValue> Next { get; set; }
     }
 
-    class Queue
+    class Queue<TValue>
     {
-        QueueItem head;
-        QueueItem tail;
+        QueueItem<TValue> head;
+        QueueItem<TValue> tail;
 
-        public void Enqueue(int value)
+        public void Enqueue(TValue value)
         {
-            var newItem = new QueueItem { Value = value };
+            var newItem = new QueueItem<TValue> { Value = value };
             if (head == null)
             {
                 head = tail = newItem;
@@ -25,7 +25,7 @@
             }
         }
 
-        public int Dequeue()
+        public TValue Dequeue()
         {
             if (head == null) throw new InvalidOperationException();
             var delValue = head.Value;
@@ -39,7 +39,7 @@
     {
         static void Main(string[] args)
         {
-            var queue = new Queue();
+            var queue = new Queue<int>();
             queue.Enqueue(1);
             queue.Enqueue(2);
             queue.Enqueue(3);
