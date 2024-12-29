@@ -1,35 +1,37 @@
 ﻿namespace GenericQueue
 {
-    class Stack
+    class QueueItem
     {
-        List<int> list = new List<int>();
-        public void Push(int value)
-        {
-            list.Add(value);
-        }
-        public int Pop()
-        {
-            if (list.Count == 0) throw new InvalidOperationException();
-            var result = list[list.Count - 1];
-            list.RemoveAt(list.Count - 1);
-            return result;
-        }
+        public int Value { get; set; }
+        public QueueItem Next { get; set; }
     }
 
     class Queue
     {
-        List<int> list = new List<int> ();
+        QueueItem head;
+        QueueItem tail;
+
         public void Enqueue(int value)
         {
-            list.Add(value);
+            var newItem = new QueueItem { Value = value };
+            if (head == null)
+            {
+                head = tail = newItem;
+            }
+            else
+            {
+                tail.Next = newItem;
+                tail = newItem;
+            }
         }
 
         public int Dequeue()
         {
-            if (list.Count == 0) throw new InvalidOperationException();
-            var result = list[0];
-            list.RemoveAt(0);
-            return result;
+            if (head == null) throw new InvalidOperationException();
+            var delValue = head.Value;
+            head = head.Next;
+            if (head == null) tail = null;
+            return delValue;
         }
     }
 
@@ -37,14 +39,6 @@
     {
         static void Main(string[] args)
         {
-            var stack = new Stack();
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-
             var queue = new Queue();
             queue.Enqueue(1);
             queue.Enqueue(2);
