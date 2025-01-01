@@ -1,4 +1,7 @@
-﻿namespace GenericQueue
+﻿using System.Collections;
+using System.Reflection.Metadata.Ecma335;
+
+namespace GenericQueue
 {
     class QueueItem<TValue>
     {
@@ -6,7 +9,7 @@
         public QueueItem<TValue> Next { get; set; }
     }
 
-    class Queue<TValue>
+    class Queue<TValue> : IEnumerable<TValue>
     {
         QueueItem<TValue> head;
         QueueItem<TValue> tail;
@@ -33,7 +36,47 @@
             if (head == null) tail = null;
             return delValue;
         }
+
+        public IEnumerator<TValue> GetEnumerator()
+        {
+            return new QueueEnumerator(this);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+
+        class QueueEnumerator : IEnumerator<TValue>
+        {
+            Queue<TValue> queue;
+            QueueItem<TValue> item;
+
+            public QueueEnumerator(Queue<TValue> queue)
+            {
+                this.queue = queue;
+                item = null;
+            }
+            public TValue Current
+            {
+                get { return item.Value; }
+            }
+            public bool MoveNext()
+            {
+                if (item == null)
+                    item = queue.head;
+                else
+                    item = item.Next;
+                return item != null;
+            }
+
+            object IEnumerator.Current => Current;
+
+            public void Dispose()
+            { }
+            public void Reset()
+            { }
+        }
     }
+
 
     internal class Program
     {
@@ -43,9 +86,9 @@
             queue.Enqueue(1);
             queue.Enqueue(2);
             queue.Enqueue(3);
-            Console.WriteLine(queue.Dequeue());
-            Console.WriteLine(queue.Dequeue());
-            Console.WriteLine(queue.Dequeue());
+
+            foreach (var item in queue)
+                Console.WriteLine(item);
         }
     }
 }
