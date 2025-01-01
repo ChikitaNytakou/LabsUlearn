@@ -39,42 +39,15 @@ namespace GenericQueue
 
         public IEnumerator<TValue> GetEnumerator()
         {
-            return new QueueEnumerator(this);
+            var current = head;
+            while (current != null)
+            {
+                yield return current.Value;
+                current = current.Next;
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-
-
-        class QueueEnumerator : IEnumerator<TValue>
-        {
-            Queue<TValue> queue;
-            QueueItem<TValue> item;
-
-            public QueueEnumerator(Queue<TValue> queue)
-            {
-                this.queue = queue;
-                item = null;
-            }
-            public TValue Current
-            {
-                get { return item.Value; }
-            }
-            public bool MoveNext()
-            {
-                if (item == null)
-                    item = queue.head;
-                else
-                    item = item.Next;
-                return item != null;
-            }
-
-            object IEnumerator.Current => Current;
-
-            public void Dispose()
-            { }
-            public void Reset()
-            { }
-        }
     }
 
 
