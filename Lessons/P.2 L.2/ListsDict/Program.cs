@@ -9,14 +9,16 @@ namespace ListsDict
 
         public int Count { get { return count; } }
 
-        void Enlarge()
-        {
-            throw new NotImplementedException();
-        }
         public MyList()
         {
             collection = new T[100];
         }
+
+        void Enlarge()
+        {
+            throw new NotImplementedException();
+        }
+        
         public void Add(T value)
         {
             if (count == collection.Length)
@@ -28,6 +30,13 @@ namespace ListsDict
         {
             for (int i = 0; i < count; i++)
                 yield return collection[i];
+        }
+
+        public bool Contains(T value)
+        {
+            for (int i = 0; i < count; i++)
+                if (collection[i].Equals(value)) return true;
+            return false;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
